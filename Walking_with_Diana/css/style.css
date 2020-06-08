@@ -459,7 +459,7 @@ span:last-child{
     bottom: 100px;
     right: 5%;
     z-index: 30;
-    background-color: #fff;
+    background-color: #a71d24;
     cursor: pointer;
     border: 1px solid white;
     transition: 1s all;
