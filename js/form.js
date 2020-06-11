@@ -1,6 +1,7 @@
 const forms = () => {
     const form = document.querySelectorAll('form'),
-        inputs = document.querySelectorAll('input');
+        inputs = document.querySelectorAll('input'),
+        textareas = document.querySelectorAll('textarea');
 
 
     //checkNumInputs('input[name="user_phone"]');
@@ -9,13 +10,13 @@ const forms = () => {
         loading: 'Загрузка...',
         success: 'Спасибо! Скоро мы с Вами свяжемся',
         failure: 'Что-то пошло не так...',
-        spinner: 'assets/img/spinner.gif',
+        spinner: 'img/spinner.gif',
         ok: 'img/ok.png',
         fail: 'img/fail.png'
     };
 
     const path = {
-        designer: 'assets/server.php'
+        designer: 'server.php'
     };
 
     const postData = async (url, data) => {
@@ -27,11 +28,14 @@ const forms = () => {
         return await res.text();
     };
 
-    const clearInputs = () => {
+    const clearData = () => {
         inputs.forEach(item => {
             item.value = '';
         });
 
+        textareas.forEach(item => {
+            item.value = '';
+        });
     };
 
     form.forEach(item => {
@@ -73,7 +77,7 @@ const forms = () => {
                     textMessage.textContent = message.failure;
                 })
                 .finally(() => {
-                    clearInputs();
+                    clearData();
                     setTimeout(() => {
                         statusMessage.remove();
                         item.style.display = 'block';

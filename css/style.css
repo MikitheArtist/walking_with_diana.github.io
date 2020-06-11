@@ -451,6 +451,9 @@ span:last-child{
     padding: 1rem 1rem 1rem 1rem;
 }
 
+.status {
+    text-align: center;
+}
 
 .pageup {
     opacity: 0;
