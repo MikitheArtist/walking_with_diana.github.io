@@ -382,7 +382,7 @@ span:last-child{
 }
 
 .popup-design {
-    z-index: 20;
+    z-index: 40;
     position: fixed;
     display: none;
     top: 0;
